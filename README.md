@@ -1,1 +1,1 @@
-# jmxagent-prometheus-exporter
+# prometheus-jmx-exporter
