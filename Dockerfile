@@ -11,4 +11,8 @@ ENV CUSTOM_JMX_CONF_COMMAND ""
 ADD startup.sh /usr/bin/startup.sh
 ADD configs /etc/jmx_exporter
 
+RUN curl -l ${JMX_EXPORTER_URL} > /etc/jmx_exporter/jmx_exporter_agent.jar
+
+VOLUME /etc/jmx_exporter
+
 CMD ["/usr/bin/startup.sh"]
